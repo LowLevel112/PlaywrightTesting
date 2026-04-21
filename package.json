@@ -1,0 +1,21 @@
+{
+  "name": "playwright-android-demo",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript automation with Allure, Android support, and GitHub Actions",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:android": "npx playwright test --project=android",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:mobile-emulation": "npx playwright test --project=mobile-emulation",
+    "allure:generate": "npx allure generate allure-results --clean",
+    "allure:open": "npx allure open allure-report",
+    "allure:report": "npm run allure:generate && npm run allure:open"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^22.0.0",
+    "allure-playwright": "^3.2.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.0.0"
+  }
+}
