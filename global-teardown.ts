@@ -55,8 +55,8 @@ async function globalTeardown(config: FullConfig) {
   }
 
   console.log('\n✨ Phân loại artifact hoàn tất!');
-  console.log(`📁 test-results/pass/   - Test passed`);
-  console.log(`📁 test-results/fail/   - Test failed\n`);
+  console.log(`test-results/pass/   - Test passed`);
+  console.log(`test-results/fail/   - Test failed\n`);
 }
 
 export default globalTeardown;

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Playwright TypeScript automation with Allure, Android support, and GitHub Actions",
   "scripts": {
+    "clean": "node -e \"const fs = require('fs'); ['allure-results', 'test-results'].forEach(d => { if (fs.existsSync(d)) { fs.rmSync(d, {recursive: true, force: true}); console.log('--- Cleaned: ' + d + ' ---'); } })\"",
+    "pretest:android": "npm run clean",
+    "pretest": "npm run clean",
     "test": "npx playwright test",
     "test:android": "npx playwright test --project=android",
     "test:chromium": "npx playwright test --project=chromium",
